@@ -1,4 +1,3 @@
-const { Router } = require("express");
 const express = require("express");
 const router = express.Router();
 // Importing the models to use their database functions.
