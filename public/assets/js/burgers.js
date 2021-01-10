@@ -43,8 +43,9 @@ if (devourBtn) {
 const addBtn = document.getElementById('addButton');
 
 if (addBtn) {
-	addBtn.addEventListener("click", (e) => {
+	addBtn.addEventListener("submit", (e) => {
 		e.preventDefault();
+		console.log("HHHHHH");
 
 		const name = document.getElementById("burger-input").value.trim()
 		const newBurger = {

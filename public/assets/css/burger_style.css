@@ -8,3 +8,13 @@ img {
     height: auto;
     padding-bottom: 10px;
 }
+
+.bL {
+    display: inline-block;
+}
+
+.bList {
+    padding: 3px;
+    list-style: none;
+    opacity: 0.3;
+}
