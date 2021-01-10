@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-6">
+        <ol style="display: inline-block;">
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li class="pb-2">
+                {{burger_name}}
+                <button class="btn btn-primary dBurger" id="{{id}}">Devour it!</button>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ol>
+    </div>
+
+    <div class="col-md-6">
+        <ol style="display: inline-block;">
+            {{#each burgers}}
+            {{#if devoured}}
+            <li class="pb-2">
+                {{burger_name}}
+            </li>
+            {{/if}}
+            {{/each}}
+        </ol>
+    </div>
+</div>
