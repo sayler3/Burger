@@ -11,7 +11,14 @@ if (devourBtn) {
 	devourBtn.forEach((button) => {
 		button.addEventListener("click", (e) => {
 			e.preventDefault();
-			// console.log(e.target);
+            // console.log(e.target);
+            
+            const id = e.currentTarget.getAttribute('data-id');
+            const devoured = e.currentTarget.getAttribute('data-devoured');
+            const plateEmpty = {
+                devoured: devoured,
+            };
+            console.log(id);
 		});
 	});
 }
