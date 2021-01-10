@@ -43,11 +43,21 @@ const orm = {
 		let queryString = `UPDATE ${table}`;
 
 		queryString += " SET ";
-		queryString += 'devoured = 1';
+		queryString += "devoured = 1";
 		queryString += " WHERE ";
-        queryString += condition;
-        queryString += ';';
+		queryString += condition;
+		queryString += ";";
 
+		connection.query(queryString, (err, result) => {
+			if (err) {
+				throw err;
+			}
+
+			cb(result);
+		});
+	},
+	clearTable(table, cb) {
+		let queryString = `DELETE FROM ${table}`;
 		connection.query(queryString, (err, result) => {
 			if (err) {
 				throw err;
