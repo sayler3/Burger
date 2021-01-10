@@ -25,16 +25,21 @@ router.put("/api/burgers/:id", (req, res) => {
 
 	// console.log('condition', condition);
 
-	burger.updateOne(
-		condition,
-		(results) => {
-			if (results.changedRows === 0) {
-				return res.status(404).end();
-			}
-			res.status(200).end();
+	burger.updateOne(condition, (results) => {
+		if (results.changedRows === 0) {
+			return res.status(404).end();
 		}
-	);
+		res.status(200).end();
+	});
 });
 
+router.delete("/api/burgers", (req, res) => {
+	burger.clearTable((results) => {
+		if (results.changedRows === 0) {
+			return res.status(404).end();
+		}
+		res.status(200).end();
+	});
+});
 // Exporting routes for server.js to use.
 module.exports = router;

@@ -40,14 +40,13 @@ if (devourBtn) {
 }
 
 //Create a burger
-const addBtn = document.getElementById('addButton');
+const addBtn = document.getElementById("addButton");
 
 if (addBtn) {
 	addBtn.addEventListener("submit", (e) => {
 		e.preventDefault();
-		console.log("HHHHHH");
 
-		const name = document.getElementById("burger-input").value.trim()
+		const name = document.getElementById("burger-input").value.trim();
 		const newBurger = {
 			burger_name: name,
 		};
@@ -65,8 +64,24 @@ if (addBtn) {
 				console.log("Burger created!");
 				location.reload();
 			} else {
-                alert('Somthing went wrong when creating your burger!');
-            }
+				alert("Somthing went wrong when creating your burger!");
+			}
+		});
+	});
+}
+
+//Clear Table
+const deleteBtn = document.getElementById("delete");
+
+if (deleteBtn) {
+	deleteBtn.addEventListener("click", (e) => {
+		e.preventDefault();
+
+		fetch("/api/burgers", {
+			method: "DELETE",
+		}).then((res) => {
+			console.log("The table has been cleared");
+			location.reload();
 		});
 	});
 }

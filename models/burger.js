@@ -12,6 +12,10 @@ const burger = {
 	updateOne(objColVals, condition, cb) {
 		orm.updateOne("burgers", objColVals, condition, (res) => cb(res));
 	},
+
+	clearTable(cb) {
+		orm.clearTable("burgers", (res) => cb(res));
+	}
 };
 
 module.exports = burger;
