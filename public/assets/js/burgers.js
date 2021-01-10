@@ -25,16 +25,47 @@ if (devourBtn) {
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json",
-                },
-                
-                body: JSON.stringify(plateEmpty),
+				},
+
+				body: JSON.stringify(plateEmpty),
 			}).then((response) => {
-                if (response.ok) {
-                    location.reload('/');
-                } else {
-                    alert('Something went wrong!')
-                }
-            })
+				if (response.ok) {
+					location.reload("/");
+				} else {
+					alert("Something went wrong!");
+				}
+			});
+		});
+	});
+}
+
+//Create a burger
+const addBtn = document.getElementById('addButton');
+
+if (addBtn) {
+	addBtn.addEventListener("click", (e) => {
+		e.preventDefault();
+
+		const name = document.getElementById("burger_input").value.trim()
+		const newBurger = {
+			burger_name: name,
+		};
+
+		fetch("/api/burgers", {
+			method: "POST",
+			headers: {
+				Accept: "application/json",
+				"Content-Type": "application/json",
+			},
+
+			body: JSON.stringify(newBurger),
+		}).then((response) => {
+			if (response.ok) {
+				console.log("Burger created!");
+				location.reload();
+			} else {
+                alert('Somthing went wrong when creating your burger!');
+            }
 		});
 	});
 }
