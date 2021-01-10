@@ -3,13 +3,24 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="/public/assets/css/burger_style.css" type="text/css" />
+	<link rel="stylesheet" href="./assets/css/burger_style.css" type="text/css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous"></script>
 	<title>Burger Eater</title>
 </head>
 
-<body>
+<body class="mx-auto text-center">
+	<jumbotron>
+		<h1>Eat The Burger</h1>
+		<div id="burger-logo">
+			<img src="./assets/img/burger.png" alt="burger-photo" id="img">
+		</div>
+	</jumbotron>
 	{{{ body }}}
-    <script src="/public/assets/js/burgers.js"></script>
+	<script src="/public/assets/js/burgers.js"></script>
 </body>
 
 </html>
