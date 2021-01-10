@@ -46,7 +46,7 @@ if (addBtn) {
 	addBtn.addEventListener("click", (e) => {
 		e.preventDefault();
 
-		const name = document.getElementById("burger_input").value.trim()
+		const name = document.getElementById("burger-input").value.trim()
 		const newBurger = {
 			burger_name: name,
 		};
