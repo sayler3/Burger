@@ -18,7 +18,7 @@ This is a node application that is able to do the following:
 
 ## Demo video
 
-![demo of application]()
+![demo of application](public/assets/img/Burger_Eater.gif)
 
 
 ## Table of Contents
