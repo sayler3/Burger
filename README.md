@@ -16,6 +16,10 @@ This is a node application that is able to do the following:
 
 - The user is also able to clear there table with a delete functionality.
 
+This app has been deployed via Heroku to view click bellow:
+
+[**Burger_Eater**](https://burger-eater-sa.herokuapp.com/)
+
 ## Demo video
 
 ![demo of application](public/assets/img/Burger_Eater.gif)
